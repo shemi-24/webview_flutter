@@ -1,0 +1,39 @@
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<script id="context" type="text/javascript" 
+src="https://sandbox-payments.open.money/layer"></script>
+<script id="context" type="text/javascript"
+src="https://payments.open.money/layer"></script>
+<body>
+  <script>
+ Layer.checkout({
+        token: "payment_token",
+        accesskey: "access_key"
+    },
+    function(response) {
+    
+        if (response.status == "captured") {
+                        
+           // response.payment_token_id
+           // response.payment_id
+
+        } else if (response.status == "created") {
+
+
+        } else if (response.status == "pending") {
+
+
+        } else if (response.status == "failed") {
+
+
+        } else if (response.status == "cancelled") {
+
+        }
+    },
+    function(err) {
+        //integration errors
+    }
+);
+</script>
+</body>
+</html>
